@@ -14,9 +14,11 @@ const getVoiceForLang = async (lang) => {
   return (await getVoices()).find(v => v.lang.toLowerCase() === lang)
 }
 
-const say = async (lang, text) => {
-  const utterance = new SpeechSynthesisUtterance(text)
-  const voice = await getVoiceForLang(lang)
+const speakEl = document.getElementById('b5188624-0739-4c54-a9b6-f212383d8370-speak')
+
+speakEl.onclick = async () => {
+  const utterance = new SpeechSynthesisUtterance(speakEl.dataset.word)
+  const voice = await getVoiceForLang(speakEl.dataset.lang)
   utterance.voice = voice
   speechSynthesis.speak(utterance)
 }
