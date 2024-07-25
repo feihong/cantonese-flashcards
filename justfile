@@ -10,6 +10,7 @@ build:
 clean:
   rm -rf _build
 
+# Update Cantonese model templates
 update: build
 	python update_anki.py
 
