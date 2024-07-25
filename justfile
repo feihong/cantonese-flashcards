@@ -1,8 +1,8 @@
 install:
-  npm install && pip install -r requirements.txt
+  pip install -r requirements.txt
 
-dev:
-  npx vite
+serve:
+  cd Cantonese && npx serve
 
 build:
   npx vite build && python build.py
