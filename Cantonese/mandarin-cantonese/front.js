@@ -5,8 +5,8 @@ recognition.lang = 'zh-hk'
 const speakEl = document.getElementById('b5188624-0739-4c54-a9b6-f212383d8370-speak')
 const listenEl = document.getElementById('b5188624-0739-4c54-a9b6-f212383d8370-listen')
 const transcriptEl = document.getElementById('b5188624-0739-4c54-a9b6-f212383d8370-transcript')
-// const front = document.querySelector('.b5188624-0739-4c54-a9b6-f212383d8370-front').innerText
-const front = '广东话'
+const front = document.querySelector('.b5188624-0739-4c54-a9b6-f212383d8370-front').innerText
+// const front = '广东话'
 
 speakEl.onclick = () => {
   say('zh-cn', front)
