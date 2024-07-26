@@ -16,3 +16,6 @@ update: build
 
 anki:
 	QTWEBENGINE_REMOTE_DEBUGGING=8080 open -a Anki
+
+cards:
+  python generate_cards.py
