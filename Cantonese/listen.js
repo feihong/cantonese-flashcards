@@ -20,7 +20,8 @@ recognition.onsoundend = () => {
 
 recognition.onresult = event => {
   const result = event.results[0][0]
-  const transcript = result.transcript
+  const confidence = result.confidence * 100
+  const transcript = `${result.transcript} (${confidence.toFixed(0)}%)`
   transcriptEl.textContent = 'You said: ' + transcript
   localStorage.setItem('answer', transcript)
   listenEl.innerText = 'Listen'
